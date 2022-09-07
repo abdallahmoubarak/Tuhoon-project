@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuhoon University</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hellooo Lo'ay Amara</h1>
+      <div class="line"></div>
+      <form class="flex" action="/instructors" method="GET">
+        <button id="instructors">Get all instructors</button>
+      </form>
+      <!-- line -->
+      <div class="line"></div>
+
+      <form class="flex" action="/students" method="GET">
+        <button type="submit">Get all students</button>
+      </form>
+      <!-- line -->
+      <div class="line"></div>
+
+      <div class="text">
+        To get student by id change the url to localhost:5000/students/id
+      </div>
+      <!-- line -->
+      <div class="line"></div>
+      <form action="/students" class="flex" method="post">
+        <input placeholder="First Name" name="firstname" />
+        <input placeholder="Last Name" name="lastname" />
+        <input type="date" placeholder="Date Of Birth" name="DOB" />
+        <input placeholder="MAJOR" name="MAJOR" />
+        <button type="submit">Add new student</button>
+      </form>
+    </div>
+    <!-- <%= locals.text %> -->
+
+    <style>
+      body {
+        text-align: center;
+        color: cornflowerblue;
+      }
+      .container {
+        max-width: 40rem;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 2.6rem;
+      }
+      button {
+        background-color: blueviolet;
+        border: none;
+        border-radius: 0.3rem;
+        padding: 0.6rem 1.2rem;
+        color: white;
+        font-size: 1.6rem;
+        cursor: pointer;
+        margin: 0.2rem;
+      }
+      button:hover {
+        background-color: cornflowerblue;
+      }
+      input {
+        border: 2px solid blueviolet;
+        border-radius: 0.3rem;
+        padding: 0.6rem 1.2rem;
+        color: blueviolet;
+        font-size: 1.6rem;
+        margin: 0.2rem;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      .line {
+        height: 1rem;
+        border-bottom: 1px solid rgba(137, 43, 226, 0.726);
+        margin: 1rem 0rem;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .flex input {
+        flex: 1;
+      }
+      .flex button {
+        flex: 1;
+      }
+      textarea {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.2rem 0.8rem;
+        margin: 0.3rem;
+        min-height: 6rem;
+      }
+      .text {
+        font-size: 1.5rem;
+      }
+    </style>
+  </body>
+</html>
